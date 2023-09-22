@@ -1,0 +1,13 @@
+[Unit]
+Description = for flask WEB Application Daemon
+
+[Install]
+WantedBy = multi-user.target
+
+[Unit]
+After=mariadb.service
+
+[Service]
+ExecStart = /usr/local/bin/WebAppD
+Restart = yes
+Type = simple
